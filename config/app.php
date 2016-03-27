@@ -152,7 +152,8 @@ return [
 		 */
 		'Intervention\Image\ImageServiceProvider',
 		'Baum\Providers\BaumServiceProvider',
-		'Illuminate\Html\HtmlServiceProvider',
+		//'Illuminate\Html\HtmlServiceProvider',
+    Collective\Html\HtmlServiceProvider::class,
 		'HieuLe\Active\ActiveServiceProvider',
 		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
 		'Webpatser\Countries\CountriesServiceProvider',
@@ -208,8 +209,11 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Image' 	=> 'Intervention\Image\Facades\Image',
-		'Form'		=> 'Illuminate\Html\FormFacade',
-		'HTML'		=> 'Illuminate\Html\HtmlFacade',
+		//'Form'		=> 'Illuminate\Html\FormFacade',
+		//'HTML'		=> 'Illuminate\Html\HtmlFacade',
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
+
 		'Active' 	=> 'HieuLe\Active\Facades\Active',
 		'Cart'      => 'Gloudemans\Shoppingcart\Facades\Cart',
 		'Countries' => 'Webpatser\Countries\CountriesFacade',

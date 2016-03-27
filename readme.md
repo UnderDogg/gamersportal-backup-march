@@ -10,4 +10,5 @@
 - php artisan db:migrate
 
 ## Changes
-illuminate/html needed to be replaced
+illuminate/html needed to be replaced by laravelcollective/html
+needed to add doctrine/dbal to rename columns / tables
