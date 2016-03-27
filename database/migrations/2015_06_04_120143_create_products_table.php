@@ -19,19 +19,19 @@ class CreateProductsTable extends Migration {
 			 */
 			$table->increments('id');
 
+			$table->string('name')->index();
+			$table->integer('category_id')->unsigned()->nullable();
+
 			// Active in store
 			$table->boolean('active')->default(false);
+			$table->string('slug', 255)->unique();
 
 			// New label
 			$table->boolean('new')->default(false);
 
-			$table->string('name')->index();
-			$table->integer('category_id')->unsigned()->nullable();
-			$table->text('description');
 			$table->decimal('price', 8, 2);
 			$table->string('image')->nullable()->default('img/product-no-image.jpg');
 			$table->string('image_thumb')->nullable()->default('img/product-no-image.jpg');
-			$table->string('slug', 255)->unique();
 
 			// Discounted price, NULL if there's no discount
 			$table->decimal('discounted_price', 8, 2)->nullable();
@@ -42,6 +42,8 @@ class CreateProductsTable extends Migration {
 			$table->string('sku')->unique();
 			$table->integer('quantity')->nullable();
 			$table->decimal('weight', 8, 2);
+
+			$table->text('description');
 
 			$table->timestamps();
 

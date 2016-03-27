@@ -1,16 +1,13 @@
-## Laravel PHP Framework
+# GamersPortal
 
-Laravel based webshop for video games, consoles and console accessories. Personal project made exclusively for educational purposes.
+## Install
+- git clone
+- create database
+- copy .env.example .env
+- edit .env and fill database information
+- composer install
+- php artisan key:generate
+- php artisan db:migrate
 
-## Front-end functionalities
-* register/login
-* products and categories
-* searching products
-* cart (add product to cart, remove product, clear all cart)
-* "Pay with card" payment method using Stripe
-* overview of all orders
-
-## Back-end admin functionalities
-* CRUD operations on products and categories
-* proccessing orders
-* overview of all users
+## Changes
+illuminate/html needed to be replaced

@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 .env
+.idea
 
 # Ignore Sublime Text related files
 *.sublime-project
