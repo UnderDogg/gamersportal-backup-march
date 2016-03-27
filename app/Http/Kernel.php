@@ -28,7 +28,7 @@ class Kernel extends HttpKernel {
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
 		'store.category' => 'App\Http\Middleware\AfterStoreCategory',
-		'store.product' => 'App\Http\Middleware\AfterStoreProduct',
+		'store.game' => 'App\Http\Middleware\AfterStoreGame',
 		'checkout' => 'App\Http\Middleware\CheckoutMiddleware',
 		'admin' => 'App\Http\Middleware\AdminMiddleware',
 	];

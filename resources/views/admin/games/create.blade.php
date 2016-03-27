@@ -1,10 +1,10 @@
-@extends('admin.master', ['title' => 'Admin panel - Create new product'])
+@extends('admin.master', ['title' => 'Admin panel - Create new game'])
 
 @section('content')
 <div class="col-sm-6">
 	@include('errors.list')
 	<div class="form">
-		{!! Form::open(['method' => 'POST', 'url'=> route('AdminProductStore'), 'files' => true]) !!}
+		{!! Form::open(['method' => 'POST', 'url'=> route('AdminGameStore'), 'files' => true]) !!}
 		<div class="form-group">
 			{!! Form::label('name', 'Name:') !!}
 			{!! Form::text('name', null, ['class' => 'form-control']) !!}
@@ -50,7 +50,7 @@
 			{!! Form::checkbox('new', '1' ) !!}
 		</div>
 		<div class="form-group">
-			{!! Form::submit('Create product',  ['class' => 'btn btn-primary form-control']) !!}
+			{!! Form::submit('Create game',  ['class' => 'btn btn-primary form-control']) !!}
 		</div>
 		{!! Form::close() !!}
 	</div>

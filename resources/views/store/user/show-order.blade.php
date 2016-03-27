@@ -33,9 +33,9 @@
 		</div>
 
 		<ul class="list-group">
-			@foreach($order->products as $productItem)
-			<a href="{{ route('StoreProductShow', $productItem->product->slug) }}" class="inherit" target="_blank">
-				<li class="list-group-item">{{ $productItem->product->name }}, x{{ $productItem->quantity }}, ${{ $productItem->price * $productItem->quantity }} </li>
+			@foreach($order->games as $gameItem)
+			<a href="{{ route('StoreGameShow', $gameItem->game->slug) }}" class="inherit" target="_blank">
+				<li class="list-group-item">{{ $gameItem->game->name }}, x{{ $gameItem->quantity }}, ${{ $gameItem->price * $gameItem->quantity }} </li>
 			</a>
 			@endforeach
 			@if( $order->full_price < 150 - 15)

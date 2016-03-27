@@ -3,7 +3,7 @@
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\Game;
 
 class RouteServiceProvider extends ServiceProvider {
 
@@ -41,18 +41,18 @@ class RouteServiceProvider extends ServiceProvider {
 			return $category;
 		});
 
-		// Add Product model for route model binding, use slug as id
-		$router->bind('product', function($value)
+		// Add Game model for route model binding, use slug as id
+		$router->bind('game', function($value)
 		{
 
-			$product = Product::where('slug', $value)->first();
+			$game = Game::where('slug', $value)->first();
 
-			if($product == null)
+			if($game == null)
 			{
 				abort(404);
 			}
 
-			return $product;
+			return $game;
 		});
 
 		// Add Order model for route model binding

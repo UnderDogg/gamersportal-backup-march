@@ -18,7 +18,7 @@ class CheckoutMiddleware
     {   
         if(Cart::count() <= 0)
         {   
-            $request->session()->flash('status', 'In order to checkout you must have products in cart.');
+            $request->session()->flash('status', 'In order to checkout you must have games in cart.');
 
             return redirect()->route('StoreCart');
         }

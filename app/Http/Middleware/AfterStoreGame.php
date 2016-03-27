@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class AfterStoreProduct
+class AfterStoreGame
 {
     /**
      * Handle an incoming request.
@@ -15,12 +15,12 @@ class AfterStoreProduct
      */
     public function handle($request, Closure $next)
     {
-        $product = $request->route()->getParameter('product');
+        $game = $request->route()->getParameter('game');
 
         /**
-         * Abort if product is not active 
+         * Abort if game is not active
          */
-        if(!$product->active)
+        if(!$game->active)
         {
             abort(404);
         }

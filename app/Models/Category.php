@@ -102,10 +102,10 @@ class Category extends Node {
   // http://laravel.com/docs/5.0/eloquent#model-events
 
   /**
-   * Returns all products in category
-   * @return App\Models\Product Collection of Product model
+   * Returns all games in category
+   * @return App\Models\Game Collection of Game model
    */
-  public function products(){
-    return $this->hasMany('App\Models\Product');
+  public function games(){
+    return $this->hasMany('App\Models\Game');
   }
 }

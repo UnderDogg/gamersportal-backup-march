@@ -15,22 +15,22 @@ use App\Http\Requests\Shopping\AddToCartRequest;
 /**
  * Models
  */
-use App\Models\Product;
+use App\Models\Game;
 use Cart;
 
 class CartController extends Controller
 {	
 	/**
-	 * Adds product to cart
+	 * Adds game to cart
 	 * @param AddToCartRequest $request
 	 */
     public function add(AddToCartRequest $request)
     {
-    	$product = Product::where('active', 1)->findOrFail((int) $request->product_id);
+    	$game = Game::where('active', 1)->findOrFail((int) $request->game_id);
 
-    	if($product)
+    	if($game)
     	{
-    		Cart::associate('App\Models\Product')->add($product->id, $product->name, 1, $product->price);
+    		Cart::associate('App\Models\Game')->add($game->id, $game->name, 1, $game->price);
     	}
 
     	return back();
@@ -43,7 +43,7 @@ class CartController extends Controller
     }
 
     /**
-     * Removes product from cart
+     * Removes game from cart
      * @param  Request $request
      * @return Response
      */

@@ -1,10 +1,10 @@
-@extends('admin.master', ['title' => 'Edit product'])
+@extends('admin.master', ['title' => 'Edit game'])
 
 @section('content')
 <div class="col-sm-6">
 	@include('errors.list')
 	<div class="form">
-		{!! Form::model($product, ['method' => 'PATCH', 'url'=> route('AdminProductUpdate', $product->slug), 'files' => true]) !!}
+		{!! Form::model($game, ['method' => 'PATCH', 'url'=> route('AdminGameUpdate', $game->slug), 'files' => true]) !!}
 		<div class="form-group">
 			{!! Form::label('name', 'Name:') !!}
 			{!! Form::text('name', null, ['class' => 'form-control']) !!}
@@ -54,7 +54,7 @@
 			{!! Form::checkbox('new', '1' ) !!}
 		</div>
 		<div class="form-group">
-			{!! Form::submit('Update product',  ['class' => 'btn btn-primary form-control']) !!}
+			{!! Form::submit('Update game',  ['class' => 'btn btn-primary form-control']) !!}
 		</div>
 		{!! Form::close() !!}
 	</div>

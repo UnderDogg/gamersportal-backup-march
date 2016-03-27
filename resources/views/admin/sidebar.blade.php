@@ -4,6 +4,6 @@
   </ul>
   <ul class="nav nav-sidebar">
     <li class="{{ Active::routePattern('AdminCategory*') }}"><a href="{{ route('AdminCategoryIndex') }}">Categories</a></li>
-    <li class="{{ Active::routePattern('AdminProduct*') }}"><a href="{{ route('AdminProductIndex') }}">Products</a></li>
+    <li class="{{ Active::routePattern('AdminGame*') }}"><a href="{{ route('AdminGameIndex') }}">Games</a></li>
   </ul>
 </div>
