@@ -20,6 +20,7 @@
 </div>
 
 <div class="panel panel-brand">
+	@include('errors.list')
 	<div class="panel-heading"><h3 class="panel-title text-center">Choose shipping adress</h3></div>
 	<div class="panel-body white-section">
 		<form id="addressForm" action="{{ route('StoreOrderShipping') }}" method="POST" class="col-md-8">
@@ -70,7 +71,6 @@
 			</div>
 		</form>
 	</div>
-	@include('errors.list')
 	<div class="panel-footer clearfix">
 		<button form="addressForm" class="btn btn-success">Submit address and go to payment methods</button>
 	</div>

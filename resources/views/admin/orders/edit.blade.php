@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-sm-12">
+	@include('errors.list')
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 			<h3 class="panel-title">Change order #{{ $order->id }} status</h3>
@@ -16,7 +17,6 @@
 			{!! Form::close() !!}
 		</div>
 	</div>
-	@include('errors.list')
 </div>
 
 @endsection

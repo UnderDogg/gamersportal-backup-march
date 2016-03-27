@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-sm-8">
+	@include('errors.list')
 	<div class="form">
 		{!! Form::model($category, ['method' => 'PATCH', 'url'=> route('AdminCategoryUpdate', $category->slug)]) !!}
 		<div class="form-group">
@@ -21,7 +22,6 @@
 		</div>
 		{!! Form::close() !!}
 	</div>
-	@include('errors.list')
 </div>
 
 @endsection

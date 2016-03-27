@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-sm-6">
+	@include('errors.list')
 	<div class="form">
 		{!! Form::model($product, ['method' => 'PATCH', 'url'=> route('AdminProductUpdate', $product->slug), 'files' => true]) !!}
 		<div class="form-group">
@@ -57,7 +58,6 @@
 		</div>
 		{!! Form::close() !!}
 	</div>
-	@include('errors.list')
 </div>
 
 @endsection

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-sm-6">
+	@include('errors.list')
 	<div class="form">
 		{!! Form::open(['method' => 'POST', 'url'=> route('AdminCategoryStore')]) !!}
 		<div class="form-group">
@@ -21,7 +22,6 @@
 		</div>
 		{!! Form::close() !!}
 	</div>
-	@include('errors.list')
 </div>
 
 @endsection
